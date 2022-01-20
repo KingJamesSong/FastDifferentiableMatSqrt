@@ -8,7 +8,7 @@ All the codes for the experiments are available, including decorrelated batch no
 
 # Usages
 
-Example usage is given as follows:
+Minimal exemplery usage is given as follows:
 
 # Citation
 
@@ -25,6 +25,6 @@ Please consider citing our paper if you think the code is helpful to your resear
 
 ## Contact
 
-**If you have any questions or suggestions, please feel free to contact me**
+If you have any questions or suggestions, please feel free to contact me
 
 `yue.song@unitn.it`
