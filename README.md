@@ -1,6 +1,6 @@
 # Fast Differentiable Matrix Sqrt Root
 
-This repository constains the official Pytorch implementation of ICLR 22 Oral paper "Fast Differentiable Matrix Square Root".
+This repository constains the official Pytorch implementation of ICLR 22 paper "Fast Differentiable Matrix Square Root".
 
 ## Experiments
 
