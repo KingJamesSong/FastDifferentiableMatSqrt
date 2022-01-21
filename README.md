@@ -2,12 +2,6 @@
 
 This repository constains the official Pytorch implementation of ICLR 22 paper "Fast Differentiable Matrix Square Root".
 
-## Experiments
-
-All the codes for the following experiments are available: 
-- decorrelated batch normalization (BN)
-- second-order vision transformer 
-
 ## Usages
 
 Check [torch_utils.py](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/blob/main/torch_utils.py) for the implementation.
@@ -25,6 +19,13 @@ rand_cov = rand_matrix.bmm(rand_matrix.transpose(1,2))
 rand_cov_sqrt = FastMatSqrt(rand_cov)
 rand_inv_sqrt = FastInvSqrt(rand_cov)
 ```
+
+## Computer Vision Experiments
+
+All the codes for the following experiments are available: 
+- Decorrelated Batch Normalization (BN)
+- Second-order Vision Transformer 
+
 
 ## Citation
 
