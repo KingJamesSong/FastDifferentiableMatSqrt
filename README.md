@@ -1,6 +1,7 @@
 # Fast Differentiable Matrix Sqrt Root
 
-<center><img src="visualization_matsqrt.png" width="60%"></center>
+<center><b>Geometric Interpretation of Matrix Square Root and Inverse Square Root</b></center>
+<img src="MatSqrt_Cover" width="60%">
 
 This repository constains the official Pytorch implementation of ICLR 22 paper "Fast Differentiable Matrix Square Root".
 
