@@ -6,3 +6,4 @@ We use ResNet-18 and ResNet-50 models and validate on CIFAR10 and CIFAR100.
 
 ## Model Architecture
 
+<div align=center><img src="./Decorrealted BN/DBN.png" width="60%"/></div>
