@@ -4,7 +4,7 @@ This repository constains the official Pytorch implementation of ICLR 22 paper "
 
 ## Usages
 
-![avata](visualization_matsqrt.png)
+<img src="visualization_matsqrt.png" width="50%">
 
 Check [torch_utils.py](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/blob/main/torch_utils.py) for the implementation.
 Minimal exemplery usage is given as follows:
