@@ -11,8 +11,10 @@ All the codes for the experiments are available, including decorrelated batch no
 Check [torch_utils.py](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/blob/main/torch_utils.py) for the implementation.
 Minimal exemplery usage is given as follows:
 
-`from torch_utils import *`
-`FastMatSqrt=MPA_Lya.apply`
+```
+from torch_utils import *
+FastMatSqrt=MPA_Lya.apply
+```
 
 ## Citation
 
