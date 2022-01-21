@@ -28,8 +28,9 @@ rand_inv_sqrt = FastInvSqrt(rand_cov)
 All the codes for the following experiments are available: 
 - [Decorrelated Batch Normalization (BN)](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/tree/main/Decorrelated%20BN)
 - [Second-order Vision Transformer (So-ViT)](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/tree/main/So-ViT)
-- [Neural Style Transfer by Whitening and Coloring Transform (WCT)]()
-- [Attentive Global Covariance Pooling for Video Action Recognition]()
+- [Neural Style Transfer by Whitening and Coloring Transform (WCT)](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/tree/main/Neural%20Style%20Transfer)
+- [Temporal-Attentive Covariance Pooling (TACP) for Video Action Recognition](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/tree/main/TACP)
+- [Global Covariance Pooling for Large-Scale and Fine-grained Visual Recognition](https://github.com/KingJamesSong/DifferentiableSVD)
 
 
 ## Citation
