@@ -1,10 +1,10 @@
 # Fast Differentiable Matrix Sqrt Root
 
+<center><img src="visualization_matsqrt.png" width="60%"></center>
+
 This repository constains the official Pytorch implementation of ICLR 22 paper "Fast Differentiable Matrix Square Root".
 
 ## Usages
-
-<img src="visualization_matsqrt.png" width="50%">
 
 Check [torch_utils.py](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/blob/main/torch_utils.py) for the implementation.
 Minimal exemplery usage is given as follows:
