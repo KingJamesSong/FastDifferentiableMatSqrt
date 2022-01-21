@@ -4,7 +4,9 @@ This repository constains the official Pytorch implementation of ICLR 22 paper "
 
 ## Experiments
 
-All the codes for the experiments are available, including decorrelated batch normalization and second-order vision transformer.
+All the codes for the following experiments are available: 
+- decorrelated batch normalization (BN)
+- second-order vision transformer 
 
 ## Usages
 
