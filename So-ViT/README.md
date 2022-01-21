@@ -1,6 +1,8 @@
 ## Introduction
 
-This directory is the code of Second-order Vision Transformer (So-ViT). Our implementation is modified based on the official implementation in [So-ViT](https://github.com/jiangtaoxie/SoT.)
+This directory is the code of Second-order Vision Transformer (So-ViT). 
+
+Our implementation is modified based on the official implementation in [So-ViT](https://github.com/jiangtaoxie/SoT.)
 
 ## Model Architecture
 
