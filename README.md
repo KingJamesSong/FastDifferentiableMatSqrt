@@ -11,9 +11,17 @@ All the codes for the experiments are available, including decorrelated batch no
 Check [torch_utils.py](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/blob/main/torch_utils.py) for the implementation.
 Minimal exemplery usage is given as follows:
 
-```
+```python
+# Import and define function
+
 from torch_utils import *
 FastMatSqrt=MPA_Lya.apply
+
+# For any batched matrices:
+
+rand_matrix = torch.randn(5,32,32)
+rand_cov = rand_matrix.bmm(rand_matrix.transpose(1,2))
+rand_cov_sqrt = FastMatSqrt(rand_cov)
 ```
 
 ## Citation
