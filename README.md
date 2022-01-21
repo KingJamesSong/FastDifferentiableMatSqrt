@@ -23,8 +23,8 @@ rand_inv_sqrt = FastInvSqrt(rand_cov)
 ## Computer Vision Experiments
 
 All the codes for the following experiments are available: 
-- Decorrelated Batch Normalization (BN)
-- Second-order Vision Transformer 
+- [Decorrelated Batch Normalization (BN)](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/tree/main/Decorrelated%20BN)
+- [Second-order Vision Transformer (So-ViT)](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/tree/main/So-ViT)
 
 
 ## Citation
