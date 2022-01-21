@@ -6,5 +6,5 @@ Our implementation is modified on the basis of the architecture used in [GD-WCT]
 
 ## Model Architecure
 
-<div align=center><img src="style transfer.png" width="70%"/></div>
+<div align=center><img src="StyleTransfer.png" width="70%"/></div>
 
