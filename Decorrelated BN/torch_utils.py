@@ -22,7 +22,7 @@ def matrix_taylor_polynomial(p, I):
     p_hat = p_app
     for i in range(10):
       p_sqrt += a[i+1]*p_hat
-      p_hat = p_hat.mm(p_app)
+      p_hat = p_hat.bmm(p_app)
     return p_sqrt
 
 def matrix_pade_approximant(p,I):
@@ -33,7 +33,7 @@ def matrix_pade_approximant(p,I):
     for i in range(5):
         p_sqrt += pade_p[i+1]*p_hat
         q_sqrt += pade_q[i+1]*p_hat
-        p_hat = p_hat.mm(p_app)
+        p_hat = p_hat.bmm(p_app)
     #There are 4 options to compute the MPA: comput Matrix Inverse or Matrix Linear System on CPU/GPU;
     #It seems that single matrix is faster on CPU and batched matrices are faster on GPU
     #Please check which one is faster before running the code;
@@ -63,8 +63,8 @@ def matrix_pade_approximant_inverse(p,I):
 class MPA_Lya(torch.autograd.Function):
     @staticmethod
     def forward(ctx, M):
-        normM = torch.norm(M)
-        I = torch.eye(M.size(0), requires_grad=False, device=M.device)
+        normM = torch.norm(M,dim=[1,2]).reshape(M.size(0),1,1)
+        I = torch.eye(M.size(1), requires_grad=False, device=M.device).reshape(1,M.size(1),M.size(1)).repeat(M.size(0),1,1)
         #M_sqrt = matrix_taylor_polynomial(M/normM,I)
         M_sqrt = matrix_pade_approximant(M / normM, I)
         M_sqrt = M_sqrt * torch.sqrt(normM)
@@ -80,9 +80,9 @@ class MPA_Lya(torch.autograd.Function):
             #In case you might terminate the iteration by checking convergence
             #if th.norm(b-I)<1e-4:
             #    break
-            b_2 = b.mm(b)
-            c = 0.5 * (c.mm(3.0*I-b_2)-b_2.mm(c)+b.mm(c).mm(b))
-            b = 0.5 * b.mm(3.0 * I - b_2)
+            b_2 = b.bmm(b)
+            c = 0.5 * (c.bmm(3.0*I-b_2)-b_2.bmm(c)+b.bmm(c).bmm(b))
+            b = 0.5 * b.bmm(3.0 * I - b_2)
         grad_input = 0.5 * c
         return grad_input
 
@@ -110,9 +110,9 @@ class MPA_Lya_Inv(torch.autograd.Function):
             #In case you might terminate the iteration by checking convergence
             #if th.norm(b-I)<1e-4:
             #    break
-            b_2 = b.mm(b)
-            c = 0.5 * (c.mm(3.0 * I - b_2) - b_2.mm(c) + b.mm(c).mm(b))
-            b = 0.5 * b.mm(3.0 * I - b_2)
+            b_2 = b.bmm(b)
+            c = 0.5 * (c.bmm(3.0 * I - b_2) - b_2.bmm(c) + b.bmm(c).bmm(b))
+            b = 0.5 * b.bmm(3.0 * I - b_2)
         grad_input = 0.5 * c
         return grad_input
 
