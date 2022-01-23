@@ -126,9 +126,9 @@ class Sqrtm(Function):
             # In case you might terminate the iteration by checking convergence
             # if th.norm(b-I)<1e-4:
             #    break
-            b_2 = b.mm(b)
-            c = 0.5 * (c.mm(3.0 * I - b_2) - b_2.mm(c) + b.mm(c).mm(b))
-            b = 0.5 * b.mm(3.0 * I - b_2)
+            b_2 = b.bmm(b)
+            c = 0.5 * (c.bmm(3.0 * I - b_2) - b_2.bmm(c) + b.bmm(c).bmm(b))
+            b = 0.5 * b.bmm(3.0 * I - b_2)
         grad_input = 0.5 * c
         return grad_input
 
