@@ -3,7 +3,7 @@
 <div align=center><center><b>Geometric Interpretation of Matrix Square Root and Inverse Square Root</b></center></div>
 <div align=center><img src="MatSqrt_Cover.jpg" width="60%"/></div>
 
-This repository constains the official Pytorch implementation of ICLR 22 paper ["Fast Differentiable Matrix Square Root"](https://arxiv.org/pdf/2201.08663.pdf).
+This repository constains the official Pytorch implementation of ICLR 22 paper ["Fast Differentiable Matrix Square Root"](https://arxiv.org/pdf/2201.08663.pdf) and the expanded journal version ["Fast Differentiable Matrix Square Root and Inverse Square Root"](https://arxiv.org/pdf/2201.12543.pdf).
 
 ## Usages
 
@@ -43,6 +43,17 @@ Please consider citing our paper if you think the code is helpful to your resear
   author={Song, Yue and Sebe, Nicu and Wang, Wei},
   booktitle={ICLR},
   year={2022}
+}
+```
+
+```
+@misc{song2022fast,
+      title={Fast Differentiable Matrix Square Root and Inverse Square Root}, 
+      author={Yue Song and Nicu Sebe and Wei Wang},
+      year={2022},
+      eprint={2201.12543},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
