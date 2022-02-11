@@ -47,13 +47,11 @@ Please consider citing our paper if you think the code is helpful to your resear
 ```
 
 ```
-@misc{song2022fast,
-      title={Fast Differentiable Matrix Square Root and Inverse Square Root}, 
-      author={Yue Song and Nicu Sebe and Wei Wang},
-      year={2022},
-      eprint={2201.12543},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{song2022fast2,
+  title={Fast Differentiable Matrix Square Root and Inverse Square Root},
+  author={Song, Yue and Sebe, Nicu and Wang, Wei},
+  journal={arXiv preprint arXiv:2201.12543},
+  year={2022}
 }
 ```
 
