@@ -5,6 +5,8 @@
 
 This repository constains the official Pytorch implementation of ICLR 22 paper ["Fast Differentiable Matrix Square Root"](https://arxiv.org/pdf/2201.08663.pdf) and the expanded journal version ["Fast Differentiable Matrix Square Root and Inverse Square Root"](https://arxiv.org/pdf/2201.12543.pdf).
 
+Both the [slides](https://docs.google.com/presentation/d/1JsQMANEQNPG2aP7MOdbx4USHJS-MtzTTsx0t0rEtSXc/edit) and [poster](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/blob/main/iclr22_sqrt.png) are available.
+
 ## Usages
 
 Check [torch_utils.py](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/blob/main/torch_utils.py) for the implementation.
