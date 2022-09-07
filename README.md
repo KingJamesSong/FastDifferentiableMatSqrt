@@ -1,9 +1,9 @@
-# Fast Differentiable Matrix Sqrt Root
+# Fast Differentiable Matrix Sqrt Root and Its Inverse
 
 <div align=center><center><b>Geometric Interpretation of Matrix Square Root and Inverse Square Root</b></center></div>
 <div align=center><img src="MatSqrt_Cover.jpg" width="60%"/></div>
 
-This repository constains the official Pytorch implementation of ICLR 22 paper ["Fast Differentiable Matrix Square Root"](https://arxiv.org/pdf/2201.08663.pdf) and the expanded journal version ["Fast Differentiable Matrix Square Root and Inverse Square Root"](https://arxiv.org/pdf/2201.12543.pdf).
+This repository constains the official Pytorch implementation of ICLR 22 paper ["Fast Differentiable Matrix Square Root"](https://arxiv.org/pdf/2201.08663.pdf) and the expanded T-PAMI journal ["Fast Differentiable Matrix Square Root and Inverse Square Root"](https://arxiv.org/pdf/2201.12543.pdf).
 
 You can find the presentation of our work by the [slides](https://docs.google.com/presentation/d/1JsQMANEQNPG2aP7MOdbx4USHJS-MtzTTsx0t0rEtSXc/edit) and [poster](https://github.com/KingJamesSong/FastDifferentiableMatSqrt/blob/main/iclr22_sqrt.png).
 
@@ -52,8 +52,9 @@ Please consider citing our paper if you think the code is helpful to your resear
 @article{song2022fast2,
   title={Fast Differentiable Matrix Square Root and Inverse Square Root},
   author={Song, Yue and Sebe, Nicu and Wang, Wei},
-  journal={arXiv preprint arXiv:2201.12543},
-  year={2022}
+  journal={IEEE TPAMI},
+  year={2022},
+  publisher={IEEE}
 }
 ```
 
