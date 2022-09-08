@@ -15,8 +15,8 @@ Minimal exemplery usage is given as follows:
 ```python
 # Import and define function
 from torch_utils import *
-FastMatSqrt=MPA_Lya.apply
-FastInvSqrt=MPA_Lya_Inv.apply
+FastMatSqrt = MPA_Lya.apply
+FastInvSqrt = MPA_Lya_Inv.apply
 
 # For any batched matrices, compute their square root or inverse square root:
 rand_matrix = torch.randn(5,32,32)
