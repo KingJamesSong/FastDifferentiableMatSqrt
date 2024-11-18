@@ -711,17 +711,6 @@ def train_epoch(
             #    loss, optimizer, clip_grad=args.clip_grad, parameters=model.parameters(), create_graph=second_order)
             with amp.scale_loss(loss, optimizer) as scaled_loss:
                 scaled_loss.backward()
-            weight_grad = model.module.classifier.representation.conv_dr_block[0].weight.grad
-            B,C,H,W = weight_grad.size()
-            weight_cov = weight_grad.view(B, C * H * W).t().mm(weight_grad.view(B, C * H * W))
-            weight_cov_rsqrt = inverse_square_root(weight_cov.view(1, C * H * W, C * H * W))
-            model.module.classifier.representation.conv_dr_block[0].weight.grad = (weight_grad.view(B,C*H*W).mm(weight_cov_rsqrt.view(C*H*W,C*H*W))).view(B, C, H, W).type(weight_grad.dtype)
-            #u,s,vh=torch.linalg.svd(weight_grad.view(B,C*H*W))
-            #model.module.classifier.representation.conv_dr_block[0].weight.grad = (u.mm(vh[:B,:])).view(B,C,H,W)
-            #weight_grad = model.module.classifier.representation.conv_dr_block[3].weight.grad
-            #B,C,H,W = weight_grad.size()
-            #u,s,vh=torch.linalg.svd(weight_grad.view(B,C*H*W))
-            #model.module.classifier.representation.conv_dr_block[3].weight.grad = (u.mm(vh[:B,:])).view(B,C,H,W)
             optimizer.step()
         else:
             loss.backward(create_graph=second_order)
